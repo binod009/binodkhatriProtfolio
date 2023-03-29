@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
 body {
   background-color: #0f1624;
+}
+
+.boxshadow {
+  box-shadow: rgba(219, 211, 211, 0.35) 0px 5px 15px;
 }
