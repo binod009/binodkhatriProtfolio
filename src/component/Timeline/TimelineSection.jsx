@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 const timeline = [
   {
     year: "2016",
@@ -20,8 +20,34 @@ const timeline = [
     description:
       "DoneInternship In Stars Compnany Pvt ltd. as FrontEnd developer",
   },
+  {
+    year: "2024",
+    description:
+      "DoneInternship In Stars Compnany Pvt ltd. as FrontEnd developer",
+  },
+  {
+    year: "2025",
+    description:
+      "DoneInternship In Stars Compnany Pvt ltd. as FrontEnd developer",
+  },
 ];
 const TimelineSection = () => {
+  const [width, setWidth] = useState(0);
+  const [screensize, setScreensize] = useState(null);
+  const carousel = useRef();
+
+  const handleResize = () => {
+    setScreensize(window.innerWidth <= 768);
+  };
+  useEffect(() => {
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div className="max-w-[1020px] mx-auto pt-[58px]">
@@ -35,20 +61,34 @@ const TimelineSection = () => {
           the field of web development."
         </p>
 
-        <div className="flex justify-between mt-5 gap-1 ">
-          {timeline.map((item, ind) => (
-            <>
-              <div key={ind} className="flex flex-col w-64">
-                <h2 className="bg-gradient-to-r from-white to-slate-800 inline-block text-transparent bg-clip-text text-[1.5em] font-normal">
-                  {item.year}
-                </h2>
-                <p className="text-slate-400 text-[0.9em] font-normal text-start tracking-tighter">
-                  {item.description}
-                </p>
-              </div>
-            </>
-          ))}
-        </div>
+        <motion.div
+          ref={carousel}
+          className="flex lg:justify-between gap-1 mt-7 bg-orange-300 overflow-hidden"
+        >
+          <motion.div
+            drag={`${screensize ? "x" : ""}`}
+            dragConstraints={{ right: 0, left: -width }}
+            className={`bg-blue-500 flex ${screensize ? "cursor-grab" : ""}`}
+          >
+            {timeline.map((item, ind) => (
+              <>
+                <div className="p-1">
+                  <div
+                    key={ind}
+                    className="bg-red-500 flex flex-col px-5 rounded max-h-32 max-w-2xl"
+                  >
+                    <h2 className="bg-gradient-to-r from-white to-slate-800 inline-block text-transparent bg-clip-text text-[1.5em] font-normal">
+                      {item.year}
+                    </h2>
+                    <p className="text-slate-400 text-[0.9em] font-normal text-start -tracking-normal">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </>
   );
