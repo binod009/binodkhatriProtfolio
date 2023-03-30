@@ -33,19 +33,10 @@ const timeline = [
 ];
 const TimelineSection = () => {
   const [width, setWidth] = useState(0);
-  const [screensize, setScreensize] = useState(null);
   const carousel = useRef();
 
-  const handleResize = () => {
-    setScreensize(window.innerWidth <= 768);
-  };
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -66,9 +57,9 @@ const TimelineSection = () => {
           className="flex lg:justify-between gap-1 mt-7 bg-orange-300 overflow-hidden"
         >
           <motion.div
-            drag={`${screensize ? "x" : ""}`}
+            drag="x"
             dragConstraints={{ right: 0, left: -width }}
-            className={`bg-blue-500 flex ${screensize ? "cursor-grab" : ""}`}
+            className="bg-blue-500 flex"
           >
             {timeline.map((item, ind) => (
               <>
