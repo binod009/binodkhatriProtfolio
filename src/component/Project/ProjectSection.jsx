@@ -1,73 +1,44 @@
 import React from "react";
-
+import { project } from "../comon/common";
 const ProjectSection = () => {
   return (
     <>
-      <div className="text-white max-w-[1020px] mx-auto">
+      <div className="text-white max-w-[1240px] mx-auto">
         <span className="text-white font-bold text-5xl">Projects</span>
-
-        <div className="grid grid-cols-2 items-center px-3 gap-4 mt-8 p-8">
-          <div className="text-center bg-[#0e1623] rounded boxshadow">
-            <div className="flex h-64">
-              <img
-                src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/30/posts/33893/final_image/app.png"
-                className="w-full object-fill"
-                alt="weatherapp"
-              />
-            </div>
-            <div className="mt-5">
-              <p className="text-center text-[1.8rem] text-slate-500 font-normal">
-                Weather App
-              </p>
-              <div className="mx-auto max-w-[80px] h-[2px] bg-white rounded-full mt-5 mb-5"></div>
-              <p className="px-5 text-justify mb-2">
-                Introducing my latest project - A weather app that provides
-                users with up-to-date weather details for the next 5 days! With
-                a simple and user-friendly interface, this app allows users to
-                easily search for weather information in any city they desire.
-                Stay informed and prepared for any weather event with my weather
-                app.
-              </p>
-              <span className="text-center text-[1.2rem] text-slate-500 font-normal border-b-2 border-white">
-                Stack
-              </span>
-              <div className="flex items-center justify-evenly py-5">
-                <span className="text-slate-400">Reactjs</span>
+        <div className="grid grid-cols-3 gap-10 p-5">
+          {project.map((item) => (
+            <>
+              <div className="bg-slate-900 rounded-lg p-5 shadow-md text-center max-w-80 border-[0.1rem] border-slate-800">
+                <div className="bg-white overflow-hidden bg-no-repeat bg-cover rounded-lg lg:h-64 cursor-pointer ">
+                  <img
+                    className="h-[100%] object-cover rounded-lg transition duration-180 ease-linear border-2-white hover:scale-125"
+                    src={item.image}
+                    alt={item.title}
+                  />
+                </div>
+                <div className="text-slate-500 text-lg font-semibold mt-2 underline">
+                  {item.title}
+                </div>
+                <div className="py-2 px-2">
+                  <p className="text-justify text-[13px] text-slate-500">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="flex justify-around items-center py-2">
+                  <div className="bg-blue-400 px-5 py-2 rounded transition ease-in-out hover:scale-110 cursor-pointer">
+                    <a href={item.source} target="_blank">
+                      Source code
+                    </a>
+                  </div>
+                  <div className="bg-red-400 px-8 py-2 rounded transition ease-in-out hover:scale-110 cursor-pointer">
+                    <a href={item.live} target="_blank">
+                      Live
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="text-center bg-[#0e1623] rounded boxshadow ">
-            <div className="flex h-64">
-              <img
-                className="w-full object-fill"
-                src="https://www.smartvault.com/wp-content/uploads/2020/11/AdobeStock_243232821.jpeg"
-                alt="weatherapp-image"
-              />
-            </div>
-            <div className="mt-5">
-              <p className="text-center text-[1.8rem] text-slate-500 font-normal">
-                Document Management System
-              </p>
-              <div className="mx-auto max-w-[80px] h-[2px] bg-white rounded-full mt-5 mb-5"></div>
-              <p className="px-5 text-justify mb-2">
-                A web app designed for efficient user management! With ReactJS
-                and MUI components, this app allows admins to easily create and
-                manage user accounts, as well as upload and retrieve important
-                documents and images. Say goodbye to tedious user management and
-                hello to streamlined efficiency with my web app.
-              </p>
-              <span className="text-center text-[1.2rem] text-slate-500 font-normal border-b-2 border-white">
-                Stack
-              </span>
-              <div className="lg:flex lg:flex-row flex-col items-center justify-evenly py-5">
-                <span className="text-slate-400">Reactjs</span>
-                <span className="text-slate-400">MUI Component</span>
-                <span className="text-slate-400">Redux</span>
-                <span className="text-slate-400">Firebase</span>
-              </div>
-            </div>
-          </div>
+            </>
+          ))}
         </div>
       </div>
     </>

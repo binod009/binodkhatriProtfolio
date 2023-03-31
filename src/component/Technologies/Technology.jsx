@@ -7,8 +7,8 @@ import { FaReact } from "react-icons/fa";
 const Technology = () => {
   return (
     <>
-      <div className="lg:max-w-[1020px] mx-auto pt-[58px]">
-        <div className="mt-8">
+      <div className="lg:max-w-[1020px] mx-auto pt-[58px] py-12">
+        <div className="">
           <h2 className="text-white font-bold text-5xl">Technologies</h2>
           <span>
             <p className="text-white text-[1em] mt-5 px-2">

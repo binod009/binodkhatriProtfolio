@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 const Navbar = () => {
   return (
     <>
-      <div className="sticky top-0 bg-[#0f1624] z-20">
+      <div className="sticky top-0 bg-[#0f1624] z-20 py-2">
         <div className="lg:max-w-7xl mx-auto flex justify-between items-center p-2">
           <div className="lg:flex items-center justify-self-start cursor-pointer">
             <DiCssdeck color="white" size="1.5rem" />

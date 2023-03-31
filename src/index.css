@@ -12,3 +12,7 @@ body {
 .boxshadow {
   box-shadow: rgba(219, 211, 211, 0.35) 0px 5px 15px;
 }
+
+.skillshadow {
+  box-shadow: rgba(0, 0, 0, 0.45) -25px 25px 20px -20px;
+}
