@@ -1,36 +1,65 @@
 import React from "react";
+import { motion, LazyMotion, domAnimation } from "framer-motion";
+import { skills } from "../comon/common.js";
+import Skill from "../Skill/skill.jsx";
+import skill from "../Skill/skill.jsx";
 
 const Skills = () => {
   return (
-    <div className="max-w-[1240px] mx-auto py-10 ">
-      <div className="text-5xl text-white ">
-        <h2>My Skills</h2>
-      </div>
-      <div className="flex justify-between px-10 py-5">
-        <div className="flex items-center justify-center bg-[#0f1624] bg-no-repeat object-cover px-20 py-10 skillshadow text-white rounded-md">
-          <img className="w-[8rem] " src="./assets/skill/react.webp" />
+    <div className="h-screen mt-28">
+      {/* <div className="grid md:grid-cols-8 lg:gap-5 place-content-center">
+        <div className="lg:col-start-3 lg:col-span-2 flex items-center justify-center bg-[white] bg-no-repeat object-cover px-20 py-10 skillshadow text-white rounded-md">
+          <img className="h-8" src="./assets/skill/react.webp" />
         </div>
-        <div className="flex items-center justify-center  bg-no-repeat object-cover bg-[#0f1624] px-24 py-10 skillshadow  text-white rounded-md">
-          <img
-            className="w-[3rem]"
-            src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-512x307-1v56l8ed.png"
-          />
+        <div className="lg:col-start-5 lg:col-span-2 flex items-center justify-center bg-gray-500 bg-no-repeat object-cover px-20 py-10 skillshadow rounded-md">
+          <img className="h-8" src="./assets/skill/react.webp" />
         </div>
-        <div className="flex justify-items-center bg-cover  bg-no-repeat object-cover bg-[#0f1624] px-24 py-10 skillshadow text-white rounded-md">
-          <img
-            className="w-[3rem]"
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-          />
+        <div className="lg:col-start-3 lg:col-span-2 flex justify-items-center bg-cover  bg-no-repeat object-cover bg-[#0f1624] px-24 py-10 skillshadow text-white rounded-md">
+          <img className="h-8" src="./assets/skill/react.webp" />
         </div>
-        <div className="bg-[#0f1624] bg-no-repeat bg-cover object-cover px-24 py-10 skillshadow text-white rounded-md">
-          <img
-            className="w-[5rem]"
-            src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"
-          />
+        <div className="lg:col-start-5 lg:col-span-2 flex justify-items-center bg-cover  bg-no-repeat object-cover bg-[#0f1624] px-24 py-10 skillshadow text-white rounded-md">
+          <img className="h-8" src="./assets/skill/react.webp" />
         </div>
-      </div>
+      </div> */}
+
+      <motion.div
+        initial={{ opacity: 0.9 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-row justify-center items-center max-w-[100%] "
+      >
+        <div className="grid grid-cols-3 gap-x-5 gap-y-6  lg:gap-x-6">
+          {skills?.slice(0, skills.length / 2).map((item) => (
+            <Skill directionLeft={true} src={item.img} />
+          ))}
+          {skills?.slice(skills.length / 2, skills.length).map((item) => (
+            <Skill directionLeft={false} src={item.img} />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };
 
 export default Skills;
+
+// {skills?.slice(0, skills.length / 2).map((item) => (
+//   <motion.div
+//     initial={{ x: -400, opacity: 0 }}
+//     transition={{ duration: 1 }}
+//     whileInView={{ opacity: 1, x: 0 }}
+//     className="lg:col-start-3 lg:col-span-2 flex items-center justify-center bg-[white] bg-no-repeat object-cover px-20 py-10 skillshadow text-white rounded-md"
+//   >
+//     <img className="w-[8rem] " src={item.img} />
+//   </motion.div>
+// ))}
+// {skills?.slice(skills.length / 2, skills.length).map((item) => (
+//   <motion.div
+//     initial={{ x: 400, opacity: 0 }}
+//     transition={{ duration: 1 }}
+//     whileInView={{ opacity: 1, x: 0 }}
+//     className="lg:col-start-3 lg:col-span-2 flex justify-items-center bg-cover  bg-no-repeat object-cover bg-[#0f1624] px-24 py-10 skillshadow text-white rounded-md"
+//   >
+//     <img className="w-[3rem]" src={item.img} />
+//   </motion.div>
+// ))}

@@ -4,9 +4,15 @@
 
 * {
   font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent !important;
 }
+
 body {
-  background-color: #0f1624;
+  /* background-color: #0f1624; */
+  background-color: #242424;
 }
 
 .boxshadow {
@@ -14,5 +20,44 @@ body {
 }
 
 .skillshadow {
-  box-shadow: rgba(0, 0, 0, 0.45) -25px 25px 20px -20px;
+  box-shadow: rgba(0, 0, 0, 0.45) -2px 5px 11px 2px;
 }
+.ant-tabs-tab:hover {
+  color: rgb(147 197 253) !important;
+}
+.ant-tabs-tab {
+  font-size: 32px !important;
+  color: white !important;
+}
+.ant-tabs-tab:hover {
+  color: rgb(147 197 253) !important;
+}
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgb(147 197 253) !important;
+}
+.ant-tabs-tab {
+  border: red !important;
+}
+.timeline_tabs:active {
+  border: none !important;
+  border-color: red !important;
+}
+.ant-tabs-nav::before {
+  border: none !important;
+}
+.my_tabs {
+  background-color: #242424;
+}
+@media screen and (max-width: 640px) {
+  .ant-tabs-tab-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+/* 
+@media screen and (min-width: 1000px) {
+  .ant-tabs-nav-wrap {
+    margin-left: 30%;
+    margin-bottom: 30px;
+  }
+} */

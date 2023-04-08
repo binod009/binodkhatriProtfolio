@@ -33,8 +33,7 @@ export const project = [
     live: "https://binod009.github.io/weatherapp/",
   },
   {
-    image:
-      "https://www.smartvault.com/wp-content/uploads/2020/11/AdobeStock_243232821.jpeg",
+    image: "https://www.function-4.com/images/blog/chart2.png",
     title: "Document Management System",
     desc: `A web app designed for efficient user management! With ReactJS
     and MUI components, this app allows admins to easily create and
@@ -46,10 +45,31 @@ export const project = [
     live: "...",
   },
   {
-    image: "",
+    image:
+      "https://assets-global.website-files.com/5b5729421aca332c60585f78/63f5fa23da820b87c87958be_61ba503872080311dde1ea56_long-form-landing-page-examples.png",
     title: "Landing Page",
     desc: "Our landing page was made with Next.js, a powerful framework for building fast and SEO-friendly web applications. With Next.js, you can create dynamic, responsive, and scalable web pages that deliver a seamless user experience. Check out our landing page to see how Next.js can help you build better web apps!",
     source: "https://github.com/Star-Company-Pvt-Ltd/dynohive-main",
     live: "..",
+  },
+];
+export const skills = [
+  {
+    img: "./assets/skill/reacticon.png",
+  },
+  {
+    img: "./assets/skill/nodejs.webp",
+  },
+  {
+    img: "./assets/skill/javascript.png",
+  },
+  {
+    img: "./assets/skill/html.png",
+  },
+  {
+    img: "./assets/skill/GitHub.png",
+  },
+  {
+    img: "./assets/skill/tailwindicon.png",
   },
 ];

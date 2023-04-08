@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Tabs } from "antd";
+import Education from "../eduction/Education";
+import Skills from "../Skill/Skills";
 const timeline = [
   {
     year: "2016",
@@ -22,57 +25,86 @@ const timeline = [
   },
 ];
 const TimelineSection = () => {
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
+  // const [width, setWidth] = useState(0);
+  // const carousel = useRef();
 
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
+  // useEffect(() => {
+  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  // }, []);
   return (
     <>
-      <div className="max-w-[1020px] mx-auto pt-[58px] py-12">
-        <h2 className="text-white font-bold text-5xl">About Me</h2>
-        <p className="text-slate-500 text-[1rem] text-justify mt-2">
-          I am a web developer with a passion for both front-end and back-end
-          development. With my knowledge in both areas, I am able to create
-          beautiful, functional, and responsive websites. My expertise includes
-          HTML, CSS, JavaScript, React, Node.js, and SQL, among other
-          technologies. I am always looking for new and exciting challenges in
-          the field of web development."
-        </p>
-
-        <motion.div
-          ref={carousel}
-          className="flex lg:justify-between gap-1 mt-7  overflow-hidden p-5"
-        >
-          <motion.div
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-            className="flex"
-          >
-            {timeline.map((item, ind) => (
-              <>
-                <div className="p-1">
-                  <div
-                    key={ind}
-                    className="flex flex-col rounded max-h-32 max-w-2xl"
-                  >
-                    <h2 className="bg-gradient-to-r from-white to-slate-700 inline-block text-transparent bg-clip-text text-[1.5em] font-normal">
-                      {item.year}
-                    </h2>
-                    <p className="text-slate-400 text-[0.9em] font-normal text-start -tracking-normal">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </>
-            ))}
-          </motion.div>
-        </motion.div>
+      <div className="max-w-[90rem] mx-auto lg:max-w-[1240px] h-screen py-20 lg:py-24">
+        <Tabs
+          centered={true}
+          defaultActiveKey="1"
+          tabBarGutter={40}
+          size="large"
+          tabBarStyle={{
+            fontWeight: "bold",
+          }}
+          className="my_tabs"
+          items={[
+            {
+              label: `Education`,
+              key: "1",
+              children: <Education />,
+            },
+            {
+              label: `Professional Skills`,
+              key: "2",
+              children: <Skills />,
+            },
+            {
+              label: `CV`,
+              key: "3",
+              children: "",
+            },
+          ]}
+        />
       </div>
     </>
   );
 };
 
 export default TimelineSection;
+
+{
+  /* <h2 className="text-white font-bold text-5xl">About Me</h2>
+<p className="text-slate-500 text-[1rem] text-justify mt-2">
+  I am a web developer with a passion for both front-end and back-end
+  development. With my knowledge in both areas, I am able to create
+  beautiful, functional, and responsive websites. My expertise includes
+  HTML, CSS, JavaScript, React, Node.js, and SQL, among other
+  technologies. I am always looking for new and exciting challenges in
+  the field of web development."
+</p>
+
+<motion.div
+  ref={carousel}
+  className="flex lg:justify-between gap-1 mt-7  overflow-hidden p-5"
+>
+  <motion.div
+    drag="x"
+    dragConstraints={{ right: 0, left: -width }}
+    className="flex"
+  >
+    {timeline.map((item, ind) => (
+      <>
+        <div className="p-1">
+          <div
+            key={ind}
+            className="flex flex-col rounded max-h-32 max-w-2xl"
+          >
+            <h2 className="bg-gradient-to-r from-white to-slate-700 inline-block text-transparent bg-clip-text text-[1.5em] font-normal">
+              {item.year}
+            </h2>
+            <p className="text-slate-400 text-[0.9em] font-normal text-start -tracking-normal">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      </>
+    ))}
+  </motion.div>
+</motion.div> */
+}

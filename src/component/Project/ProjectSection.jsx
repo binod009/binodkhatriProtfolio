@@ -3,12 +3,12 @@ import { project } from "../comon/common";
 const ProjectSection = () => {
   return (
     <>
-      <div className="text-white max-w-[1240px] mx-auto">
-        <span className="text-white font-bold text-5xl">Projects</span>
-        <div className="grid grid-cols-3 gap-10 p-5">
+      <div className="text-white max-w-[1240px] mx-auto h-full py-20">
+        <span className="text-5xl text-white mt-28 font-bold">Projects</span>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 px-2">
           {project.map((item) => (
             <>
-              <div className="bg-slate-900 rounded-lg p-5 shadow-md text-center max-w-80 border-[0.1rem] border-slate-800">
+              <div className="bg-slate-900 rounded-lg p-5 shadow-md text-center max-w-80 border-[0.1rem] border-slate-800 mt-5">
                 <div className="bg-white overflow-hidden bg-no-repeat bg-cover rounded-lg lg:h-64 cursor-pointer ">
                   <img
                     className="h-[100%] object-cover rounded-lg transition duration-180 ease-linear border-2-white hover:scale-125"
