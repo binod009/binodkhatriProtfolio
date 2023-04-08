@@ -7,20 +7,16 @@ import Navbar from "./component/navbar/Navbar";
 function App() {
   return (
     <>
-      <div className="snap-y snap-mandatory h-screen z-0 overflow-y-scroll overflow-x-hidden">
+      <div className="antialiased scroll-smooth">
         <Navbar />
-        <section className="snap-center">
-          <HeroSection />
-        </section>
-        <section className="snap-start">
-          <ProjectSection />
-        </section>
-        <section className="snap-center">
-          <TimelineSection />
-        </section>
-        <section className="snap-start">
-          <Contactus />
-        </section>
+
+        <HeroSection />
+
+        <ProjectSection />
+
+        <TimelineSection />
+
+        <Contactus />
       </div>
     </>
   );

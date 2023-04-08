@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Tabs } from "antd";
 import Education from "../eduction/Education";
 import Skills from "../Skill/Skills";
+import Resume from "../CV/Resume";
 const timeline = [
   {
     year: "2016",
@@ -57,7 +58,7 @@ const TimelineSection = () => {
             {
               label: `CV`,
               key: "3",
-              children: "",
+              children: <Resume />,
             },
           ]}
         />
