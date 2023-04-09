@@ -42,17 +42,17 @@ const Contactus = () => {
             </div>
             <div className="flex gap-2">
               <div className="bg-gray-600 p-3 rounded-md ">
-                <a href="">
+                <a href="https://www.facebook.com/binodkhatri00">
                   <AiFillFacebook color="white" size={28} />
                 </a>
               </div>
               <div className="bg-gray-600 p-3 rounded-md">
-                <a href="">
+                <a href="https://www.linkedin.com/in/binodkhatri00">
                   <AiFillLinkedin color="white" size={28} />
                 </a>
               </div>
               <div className="bg-gray-600 p-3 rounded-md">
-                <a href="">
+                <a href="https://github.com/binod009">
                   <AiFillGithub color="white" size={28} />
                 </a>
               </div>
