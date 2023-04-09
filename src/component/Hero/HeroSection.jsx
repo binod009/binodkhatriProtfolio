@@ -4,15 +4,15 @@ import BackgroundAnimation from "../backgroundanimation/BackgroundAnimation";
 const HeroSection = () => {
   return (
     <>
-      <div className="flex max-w-[1240px] mx-auto h-full lg:h-screen lg:py-16">
+      <div className=" flex max-w-[1240px] mx-auto h-full  lg:py-16">
         <div className="grid items-start sm:grid-col-1 grid-col-1 md:grid-cols-2 md:items-center lg:w-full ">
-          <div className="flex justify-center gap-5 py-5 flex-col md:flex-col md:justify-around lg:justify-center lg:gap-12 md:items-start md:h-[100%]">
-            <div className="lg:flex py-4 lg:flex-col lg:justify-around lg:gap-1">
-              <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white">
+          <div className="flex justify-center gap-5 py-5 flex-col md:flex-col md:justify-around lg:justify-between lg:gap-5 md:items-start md:h-[100%]">
+            <div className="lg:flex py-3 lg:flex-col lg:justify-around lg:gap-1">
+              <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-gray-600 lg:mb-5">
                 Hi, I'm <br />
               </h1>
-              <h2 className="text-4xl md:text-4xl lg:text-5xl text-blue-300 leading-normal">
-                Binod Khatri,
+              <h2 className="text-4xl md:text-4xl lg:text-5xl text-white leading-normal lg:mb-2">
+                Binod Khatri ,
                 <br />
               </h2>
               <h3 className="text-4xl md:text-4xl lg:text-6xl leading-tight bg-gradient font-bold bg-clip-text inline-block text-transparent animate-bounce transition ease-in-out mt-5">
