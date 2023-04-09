@@ -41,12 +41,12 @@ const Contactus = () => {
               </text>
             </div>
             <div className="flex gap-2">
-              <div className="bg-gray-800 p-3 rounded-md object-cover">
+              <div className="bg-gray-600 p-3 rounded-md ">
                 <a href="">
                   <AiFillFacebook color="white" size={28} />
                 </a>
               </div>
-              <div className="bg-gray-500 p-3 rounded-md">
+              <div className="bg-gray-600 p-3 rounded-md">
                 <a href="">
                   <AiFillLinkedin color="white" size={28} />
                 </a>
