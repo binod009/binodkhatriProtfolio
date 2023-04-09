@@ -9,13 +9,9 @@ function App() {
     <>
       <div className="antialiased scroll-smooth">
         <Navbar />
-
         <HeroSection />
-
         <ProjectSection />
-
         <TimelineSection />
-
         <Contactus />
       </div>
     </>

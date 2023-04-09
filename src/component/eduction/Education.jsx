@@ -7,7 +7,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 const Education = () => {
   return (
-    <div className="h-screen">
+    <div>
       {/* <h1 className="text-3xl font-bold text-white pt-2 lg:pl-32 py-12">
         My Education
       </h1> */}

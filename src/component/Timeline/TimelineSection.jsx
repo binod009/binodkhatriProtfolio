@@ -26,15 +26,10 @@ const timeline = [
   },
 ];
 const TimelineSection = () => {
-  // const [width, setWidth] = useState(0);
-  // const carousel = useRef();
-
-  // useEffect(() => {
-  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, []);
   return (
     <>
-      <div className="max-w-[90rem] mx-auto lg:max-w-[1240px] h-screen py-20 lg:py-24">
+      <div className="max-w-[1240px] mx-auto py-10">
+        <h2 className="text-5xl text-white font-bold">About Me</h2>
         <Tabs
           centered={true}
           defaultActiveKey="1"
