@@ -28,7 +28,7 @@ const timeline = [
 const TimelineSection = () => {
   return (
     <>
-      <div className="max-w-[1240px] mx-auto py-10">
+      <div id="aboutme" className="max-w-[1240px] mx-auto py-10">
         <h2 className="text-5xl text-white font-bold">About Me</h2>
         <Tabs
           centered={true}

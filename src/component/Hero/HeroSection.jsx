@@ -4,7 +4,7 @@ import BackgroundAnimation from "../backgroundanimation/BackgroundAnimation";
 const HeroSection = () => {
   return (
     <>
-      <div className=" flex max-w-[1240px] mx-auto h-full lg:py-16">
+      <div id="home" className=" flex max-w-[1240px] mx-auto h-full lg:py-16">
         <div className="grid items-start sm:grid-col-1 grid-col-1 md:grid-cols-2 md:items-center lg:w-full ">
           <div className="flex justify-center gap-5 py-10  flex-col md:flex-col md:justify-around lg:justify-between lg:gap-5 md:items-start md:h-[100%]">
             <div className="lg:flex py-3 lg:flex-col lg:justify-around lg:gap-1">

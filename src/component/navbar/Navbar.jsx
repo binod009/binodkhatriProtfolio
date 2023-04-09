@@ -6,6 +6,7 @@ import {
   AiFillInstagram,
   AiOutlineMenu,
   AiOutlineClose,
+  AiFillFacebook,
 } from "react-icons/ai";
 import { Drawer } from "antd";
 import { FaFacebook } from "react-icons/fa";
@@ -27,22 +28,29 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:block">
             <ul className="text-white text-sm flex jusitfy-between gap-3 items-center lg:gap-[4rem]">
-              <li className="cursor-pointer">Project</li>
-              <li className="cursor-pointer">Technologies</li>
-              <li className="cursor-pointer">About</li>
+              <a href="#project">
+                <li className="cursor-pointer">Project</li>
+              </a>
+              <a href="#aboutme">
+                <li className="cursor-pointer">About me</li>
+              </a>
+              <a href="#contact">
+                <li className="cursor-pointer">Contact</li>
+              </a>
             </ul>
           </div>
           <div className="hidden lg:block">
             <ul className="text-white inline-flex gap-2 lg:gap-5">
-              <li className="cursor-pointer hover:scale-125 transition ease-in-out">
-                <AiFillGithub color="white" size="1.5rem" />
-              </li>
-              <li className="cursor-pointer hover:scale-125 transition ease-in-out">
-                <AiFillLinkedin color="white" size="1.5rem" />
-              </li>
-              <li className="cursor-pointer hover:scale-125 transition ease-in-out">
-                <AiFillInstagram color="white" size="1.5rem" />
-              </li>
+              <a href="https://www.linkedin.com/in/binodkhatri00">
+                <li className="cursor-pointer hover:scale-125 transition ease-in-out">
+                  <AiFillLinkedin color="white" size="1.5rem" />
+                </li>
+              </a>
+              <a href="https://www.facebook.com/binodkhatri00">
+                <li className="cursor-pointer hover:scale-125 transition ease-in-out">
+                  <AiFillFacebook color="white" size="1.5rem" />
+                </li>
+              </a>
             </ul>
           </div>
           <div className="lg:hidden">
@@ -75,11 +83,15 @@ const Navbar = () => {
       >
         <div className="divide-y divide-blue-500">
           <ul className="list-none space-y-7 mb-6">
-            <li>PROJECT</li>
-            <li>TECHNOLOGY</li>
-            <li>ABOUT</li>
-            <li>RESUME</li>
-            <li>CONTACT</li>
+            <a href="#project">
+              <li>PROJECT</li>
+            </a>
+            <a href="#aboutme">
+              <li>ABOUT ME</li>
+            </a>
+            <a href="#contact">
+              <li>CONTACT</li>
+            </a>
           </ul>
         </div>
         <hr />

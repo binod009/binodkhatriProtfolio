@@ -13,7 +13,7 @@ const Contactus = () => {
     console.log(e);
   };
   return (
-    <div className="max-w-[1240px] mx-auto h-full">
+    <div id="contact" className="max-w-[1240px] mx-auto h-full">
       <h2 className="text-white font-bold text-5xl py-5">Get In Touch</h2>
       <div className="flex flex-col gap-5 justify-between items-center  md:flex-col md:gap-y-3  lg:flex lg:items-center lg:gap-8 p-4">
         <div className="w-full text-center md:max-w-full md:text-center  bg-[#0f1624] p-5 rounded-md skillshadow h-[24rem]">

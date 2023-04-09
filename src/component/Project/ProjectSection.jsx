@@ -3,7 +3,10 @@ import { project } from "../comon/common";
 const ProjectSection = () => {
   return (
     <>
-      <div className="text-white max-w-[1240px] mx-auto h-full py-10">
+      <div
+        id="project"
+        className="text-white max-w-[1240px] mx-auto h-full py-10"
+      >
         <span className="text-5xl text-white mt-28 font-bold">Projects</span>
         <div className=" grid grid-cols-1 lg:grid-cols-3 gap-5 px-5">
           {project.map((item) => (

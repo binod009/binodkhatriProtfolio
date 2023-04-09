@@ -7,7 +7,7 @@ import Navbar from "./component/navbar/Navbar";
 function App() {
   return (
     <>
-      <div className="antialiased scroll-smooth">
+      <div className="antialiased">
         <Navbar />
         <HeroSection />
         <ProjectSection />
