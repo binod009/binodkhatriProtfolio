@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillAlert } from "react-icons/ai";
 import { IoIosSchool } from "react-icons/io";
 import {
   VerticalTimeline,
@@ -17,7 +18,9 @@ const Education = () => {
           date="2076-2079"
           iconStyle={{ background: "#003060" }}
           contentStyle={{
-            background: "#ffffff",
+            background: "#0f1624",
+            boxShadow: "none",
+            color: "whitesmoke",
           }}
           dateClassName="text-white"
           icon={<IoIosSchool color="white" />}
@@ -35,6 +38,11 @@ const Education = () => {
           className="vertical-timeline-element--work"
           dateClassName="text-white"
           date="2072 - 2074"
+          contentStyle={{
+            background: "#0f1624",
+            boxShadow: "none",
+            color: "whitesmoke",
+          }}
           iconStyle={{ background: "#003060" }}
           icon={<IoIosSchool color="white" />}
         >
@@ -51,6 +59,11 @@ const Education = () => {
           className="vertical-timeline-element--work"
           date="2071-04-01"
           dateClassName="text-white"
+          contentStyle={{
+            background: "#0f1624",
+            boxShadow: "none",
+            color: "whitesmoke",
+          }}
           iconStyle={{ background: "#003060" }}
           icon={<IoIosSchool color="white" />}
         >
