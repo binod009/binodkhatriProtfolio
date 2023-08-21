@@ -53,7 +53,7 @@ export const project = [
     live: "..",
   },
   {
-    image: "./assets/image/fruitfooddictonary.png",
+    image: "./assets/images/fruitfooddictonary.png",
     title: "Online WordWise",
     desc: "This Interactive Dictionary Web App is a user-friendly and feature-rich platform designed to provide users with comprehensive word definitions, pronunciations, and related information. This web application is an ideal tool for language enthusiasts, students, and anyone looking to enhance their vocabulary.",
     source: "https://github.com/binod009/dictonary",
