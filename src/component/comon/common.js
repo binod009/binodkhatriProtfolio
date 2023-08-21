@@ -57,7 +57,7 @@ export const project = [
     title: "Online WordWise",
     desc: "This Interactive Dictionary Web App is a user-friendly and feature-rich platform designed to provide users with comprehensive word definitions, pronunciations, and related information. This web application is an ideal tool for language enthusiasts, students, and anyone looking to enhance their vocabulary.",
     source: "https://github.com/binod009/dictonary",
-    live: "https://foodfruitdictionary.netlify.app/",
+    live: "https://foodfruitdictionary.netlify.app",
   },
 ];
 export const skills = [
