@@ -4,9 +4,10 @@ const Resume = () => {
   return (
     <div>
       <h2>binod khatri CV</h2>
-      <PDFViewer
+          <PDFViewer
+              
         document={{
-          url: "./assets/images/binodkhatriCV.pdf",
+         url: "./assets/images/binodkhatriCV.pdf",
         }}
       />
     </div>
