@@ -27,7 +27,7 @@ const Navbar = () => {
             <span className="text-white">Portfolio</span>
           </div>
           <div className="hidden lg:block">
-            <ul className="text-white text-sm flex jusitfy-between gap-3 items-center lg:gap-[4rem]">
+            <ul className="text-white text-sm flex jusitfy-between gap-5 items-center lg:gap-[4rem]">
               <a href="#project">
                 <li className="cursor-pointer">Project</li>
               </a>
@@ -81,8 +81,8 @@ const Navbar = () => {
         open={isOpen}
         destroyOnClose
       >
-        <div className="divide-y divide-blue-500">
-          <ul className="list-none space-y-7 mb-6">
+        <div className="divide-y divide-blue-500 ">
+          <ul className="flex flex-col justify-between list-none space-y-10 mb-6">
             <a href="#project">
               <li>PROJECT</li>
             </a>
@@ -108,7 +108,7 @@ const Navbar = () => {
           </div>
           <div className="bg-slate-800 p-3 rounded-lg shadow-lg">
             <a
-              href="https://github.com/binod009"
+              href="https://www.linkedin.com/in/binodkhatri00"
               target="_blank"
               rel="noreferrer"
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
           </div>
           <div className="bg-slate-800 p-3 rounded-lg shadow-lg">
             <a
-              href="https://www.linkedin.com/in/binodkhatri00"
+              href="https://github.com/binod009"
               target="_blank"
               rel="noreferrer"
             >
